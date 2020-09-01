@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms.csproj": {}
+    "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms/ShenAlgorithms.csproj": {}
   },
   "projects": {
-    "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms.csproj": {
+    "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms/ShenAlgorithms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms.csproj",
+        "projectUniqueName": "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms/ShenAlgorithms.csproj",
         "projectName": "ShenAlgorithms",
-        "projectPath": "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms.csproj",
+        "projectPath": "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms/ShenAlgorithms.csproj",
         "packagesPath": "/home/oleg/.nuget/packages/",
-        "outputPath": "/home/oleg/Projects/ShenAlgorithms/obj/",
+        "outputPath": "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"

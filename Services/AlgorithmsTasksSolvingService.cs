@@ -206,7 +206,7 @@ namespace ShenAlgorithms.Services
             result += $"fibonachi res = {res}";
             return await Task.FromResult<string>(result);
         }
-        public async Task<string> Task1_1_13(int a = 3, int b = 5)
+        public async Task<string> Task1_1_13_1(int a = 3, int b = 5)
         {
             string result = "";
             result += $"a = {a}, b = {b}\n";
@@ -221,6 +221,34 @@ namespace ShenAlgorithms.Services
             while(!(a % k == 0 && b % k == 0))
             {
                 k--;
+            }
+
+            result += $"NOD = {k}";
+            return await Task.FromResult<string>(result);
+        }
+        public async Task<string> Task1_1_13_2(int a = 3, int b = 5)
+        {
+            string result = "";
+            result += $"a = {a}, b = {b}\n";
+            int m = a, n = b;
+            int k = 0;
+            while(m != 0 || n != 0)
+            {
+                if(m > n)
+                    m = m - n;
+                else
+                    n = n - m;
+
+                if(m == 0)
+                {
+                    k = n;
+                    break;
+                }
+                else if(n == 0)
+                {
+                    k = m;
+                    break;
+                }
             }
 
             result += $"NOD = {k}";
@@ -244,6 +272,25 @@ namespace ShenAlgorithms.Services
             }
 
             result += $"NOD = {k}";
+            return await Task.FromResult<string>(result);
+        }
+        public async Task<string> Task1_1_15(int a, int b)
+        {
+            string result = "";
+
+            int d = 0;
+            int m = 0;
+            int n = 0;
+            int k = 0;
+
+            k = a < b ? a : b;
+            while(!(a%k == 0 && b%k == 0))
+            {
+                k--;
+            }
+            d = k;
+            result += $"d = {d}";
+
             return await Task.FromResult<string>(result);
         }
     }

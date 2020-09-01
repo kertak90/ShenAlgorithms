@@ -86,9 +86,21 @@ namespace ShenAlgorithms.Controllers
             await _algorithmsTasksSolvingService.Task1_1_11(n);
 
         [HttpPost("[action]")]
-        [SwaggerOperation(Description = "1.1.13 Даны два натуральных числа a и b, не равные нулю одновременно."
+        [SwaggerOperation(Description = "1.1.13_1 Даны два натуральных числа a и b, не равные нулю одновременно."
             + "Вычислите НОД(a,b) наибольший общий делитель a и b")]
-        public async Task<string> Task1_1_13(int a, int b) => 
-            await _algorithmsTasksSolvingService.Task1_1_13(a, b);
+        public async Task<string> Task1_1_13_1(int a, int b) => 
+            await _algorithmsTasksSolvingService.Task1_1_13_1(a, b);
+
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.1.13_2 Даны два натуральных числа a и b, не равные нулю одновременно."
+            + "Вычислите НОД(a,b) наибольший общий делитель a и b алгоритмом Евклида")]
+        public async Task<string> Task1_1_13_2(int a, int b) => 
+            await _algorithmsTasksSolvingService.Task1_1_13_2(a, b);
+
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.1.15 Даны натуральные a и b, не равные нулю одновременно. Найдите"
+            + "d = НОД(a,b) и такие целые x и y, что d = a*x + b*y")]
+        public async Task<string> Task1_1_15(int a, int b) =>
+            await _algorithmsTasksSolvingService.Task1_1_15(a, b);
     }
 }

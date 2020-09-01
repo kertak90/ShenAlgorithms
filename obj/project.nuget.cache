@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AoNWxPjoSexj5Y4tjPoPW/stwZy8ulL4ISOdS48bhGiuRz1mTdvZzeBegudEeDwkM/L9h+tG9HpQWNNKRilnRA==",
+  "dgSpecHash": "j+0usoy5IgA3HmMu4hBD5HzBiPbfCshdwSC2x6z5RloiDytQun44w2e9OQpgpV3efTGwAAF/CuvB/W1hxpEyJw==",
   "success": true,
-  "projectFilePath": "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms.csproj",
+  "projectFilePath": "/home/oleg/Projects/ShenAlgorithms/ShenAlgorithms/ShenAlgorithms.csproj",
   "expectedPackageFiles": [
     "/home/oleg/.nuget/packages/mathnet.numerics/4.12.0/mathnet.numerics.4.12.0.nupkg.sha512",
     "/home/oleg/.nuget/packages/microsoft.aspnetcore.authorization/1.0.0/microsoft.aspnetcore.authorization.1.0.0.nupkg.sha512",
