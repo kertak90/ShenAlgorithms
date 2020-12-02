@@ -1,5 +1,7 @@
+using System;
 using System.Threading.Tasks;
 using MathNet.Numerics.LinearAlgebra;
+using Newtonsoft.Json;
 
 namespace ShenAlgorithms.Services
 {
@@ -292,6 +294,152 @@ namespace ShenAlgorithms.Services
             result += $"d = {d}";
 
             return await Task.FromResult<string>(result);
+        }
+        public async Task<string> Task1_2_1(int n)
+        {
+            string result = "";
+            int[] arr = new int[n];
+            var rnd = new Random();
+            for(int i=0;i<n;i++)
+            {
+                arr[i] = rnd.Next(0, n);
+            }
+            System.Console.WriteLine($"{JsonConvert.SerializeObject(arr)}");
+            for(int i =0; i<n; i++)
+            {
+                arr[i]=0;
+            }
+            System.Console.WriteLine($"{JsonConvert.SerializeObject(arr)}");
+            result = JsonConvert.SerializeObject(arr);
+            return await Task.FromResult<string>(result);
+        }
+        public async Task<int> Task1_2_2(int n)
+        {
+            int result = 0;
+            int[] arr = new int[n];
+            FillRandomArray(ref arr);
+            for(int i =0; i<n; i++)
+            {
+                if(arr[i] == 0)
+                {
+                    result++;
+                }
+            }
+            System.Console.WriteLine($"{JsonConvert.SerializeObject(arr)}");
+            return await Task.FromResult<int>(result);
+        }
+        public async Task<int> Task1_2_4(int n)
+        {
+            int max = 0;
+            int[] arr = new int[n];
+            var rnd = new Random();
+            FillRandomArray(ref arr);
+            for( int i = 0; i < arr.Length; i++)
+            {
+                if(max < arr[i])
+                    max = arr[i];
+            }            
+            return await Task.FromResult<int>(max);
+        }
+        public async Task<int> Task1_2_5(int n)
+        {
+            int number = 0;
+            int numberCount = 0;
+            int[] arr = new int[n];
+            var rnd = new Random();
+            FillSortedArray(ref arr);
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if(number != arr[i])
+                {
+                    numberCount++;
+                    number = arr[i];
+                }
+            }
+            return await Task.FromResult<int>(numberCount);
+        }
+        public async Task<string> Task1_2_6(int n)
+        {
+            int numberCount = 0;
+            int[] arr = new int[n];
+            var rnd = new Random();
+            FillRandomArray(ref arr);
+            bool flag = false;
+            System.Console.WriteLine($"{JsonConvert.SerializeObject(arr)}");
+
+            for(int i = 0; i < arr.Length; i++)
+            {
+                for(int j = 0; j <= i; j++)
+                {
+                    if(arr[i] == arr[j] && i != j)
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                if(!flag)
+                    numberCount++;
+                flag = false;
+            }
+            return await Task.FromResult<string>($"array: {JsonConvert.SerializeObject(arr)}\nnumberCount: {numberCount}");
+        }
+        public async Task<int> Task1_2_7(int n)
+        {
+            int number = 0;
+            int numberCount = 0;
+            try
+            {
+                var array = new int[] { 1, 2 };
+                Console.Write(array[5]);
+            }
+            catch(ApplicationException e)
+            {
+                Console.Write(1);
+            }
+            catch(SystemException e)
+            {
+                Console.Write(2);
+            }
+            catch(Exception e)
+            {
+                Console.Write(3);
+            }
+            Console.ReadLine();
+            return await Task.FromResult<int>(numberCount);
+        }
+        private void FillRandomArray(ref int[] arr)
+        {
+            var rnd = new Random();
+            for(int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, arr.Length);
+            }
+        }
+        private void FillSortedArray(ref int[] arr)
+        {
+            var rnd = new Random();
+            for(int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(0, arr.Length);
+            }
+            BubleSort(ref arr);
+            // Array.Sort<int>(arr);
+            System.Console.WriteLine($"{JsonConvert.SerializeObject(arr)}");
+        }
+        private void BubleSort(ref int[] arr)
+        {
+            for(int i = 0; i< arr.Length; i++)
+            {
+                for(int j = i; j < arr.Length; j++)
+                {
+                    if(arr[i] > arr[j])
+                    {
+                        var tmp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = tmp;
+                    }
+                }
+            }
         }
     }
 }

@@ -102,5 +102,37 @@ namespace ShenAlgorithms.Controllers
             + "d = НОД(a,b) и такие целые x и y, что d = a*x + b*y")]
         public async Task<string> Task1_1_15(int a, int b) =>
             await _algorithmsTasksSolvingService.Task1_1_15(a, b);
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.2.1 Заполните массив нулями, независимо от начального значения переменной x")]
+        public async Task<string> Task1_2_1(int n) =>
+            await _algorithmsTasksSolvingService.Task1_2_1(n);
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.2.2 Подсчитайте количество нулей в массиве x."
+            + "Составьте фрагмент программы, не меняющий значения х, после исполнения"
+            + " которого значение некоторой целой переменной k равнялось бы числу нулей среди"
+            + "компонент массива k")]
+        public async Task<int> Task1_2_2(int n) =>
+            await _algorithmsTasksSolvingService.Task1_2_2(n);
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.2.4 Найдите максимум массива")]
+        public async Task<int> Task1_2_4(int n) =>
+            await _algorithmsTasksSolvingService.Task1_2_4(n);
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.2.5 Дан массив x, причем x[1] <= x[2] <= ... <= x[n]"
+            + "Найдите количество различных чисел среди элементов массива")]
+        public async Task<int> Task1_2_5(int n) =>
+            await _algorithmsTasksSolvingService.Task1_2_5(n);
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.2.6 Дан массив x, array[1..n] of integer"
+            + "Найдите количество различных чисел среди элементов массива, чтобы количество действий"
+            + "был порядка n^2")]
+        public async Task<string> Task1_2_6(int n) =>
+            await _algorithmsTasksSolvingService.Task1_2_6(n);
+        [HttpPost("[action]")]
+        [SwaggerOperation(Description = "1.2.7 Дан массив x, причем x[1] <= x[2] <= ... <= x[n]"
+            + "Найдите количество различных чисел среди элементов массива, чтобы количество действий"
+            + "был порядка log n")]
+        public async Task<int> Task1_2_7(int n) =>
+            await _algorithmsTasksSolvingService.Task1_2_7(n);
     }
 }
