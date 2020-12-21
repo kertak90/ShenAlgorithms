@@ -42,6 +42,7 @@ namespace ShenAlgorithms
             services.AddMvc(options => options.EnableEndpointRouting = false);
             
             services.AddScoped<AlgorithmsTasksSolvingService>();
+            services.AddScoped<SortAlgorithmsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

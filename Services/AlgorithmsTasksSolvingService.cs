@@ -383,29 +383,44 @@ namespace ShenAlgorithms.Services
             }
             return await Task.FromResult<string>($"array: {JsonConvert.SerializeObject(arr)}\nnumberCount: {numberCount}");
         }
-        public async Task<int> Task1_2_7(int n)
+        // public async Task<int> Task1_2_7(int n)
+        // {
+        //     int number = 0;
+        //     int numberCount = 0;
+        //     try
+        //     {
+        //         var array = new int[] { 1, 2 };
+        //         Console.Write(array[5]);
+        //     }
+        //     catch(ApplicationException e)
+        //     {
+        //         Console.Write(1);
+        //     }
+        //     catch(SystemException e)
+        //     {
+        //         Console.Write(2);
+        //     }
+        //     catch(Exception e)
+        //     {
+        //         Console.Write(3);
+        //     }
+        //     Console.ReadLine();
+        //     return await Task.FromResult<int>(numberCount);
+        // }
+        // public async Task<int> Task1_2_9(int m, int n)
+        // {
+        //     if(m==0 || n ==0)
+        //         await Task.FromResult<int>(0);
+        //     int numberCount = 0;
+        //     int[,] area = new int[m,n];
+        //     CreateAndFillArea(ref area, m, n);
+
+        //     return await Task.FromResult<int>(numberCount);
+        // }
+        private void CreateAndFillArea(ref int[,] area, int m, int n)
         {
-            int number = 0;
-            int numberCount = 0;
-            try
-            {
-                var array = new int[] { 1, 2 };
-                Console.Write(array[5]);
-            }
-            catch(ApplicationException e)
-            {
-                Console.Write(1);
-            }
-            catch(SystemException e)
-            {
-                Console.Write(2);
-            }
-            catch(Exception e)
-            {
-                Console.Write(3);
-            }
-            Console.ReadLine();
-            return await Task.FromResult<int>(numberCount);
+            var minSideLength = m > n ? n : m;
+            
         }
         private void FillRandomArray(ref int[] arr)
         {

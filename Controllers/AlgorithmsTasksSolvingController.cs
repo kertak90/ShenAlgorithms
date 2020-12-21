@@ -128,11 +128,19 @@ namespace ShenAlgorithms.Controllers
             + "был порядка n^2")]
         public async Task<string> Task1_2_6(int n) =>
             await _algorithmsTasksSolvingService.Task1_2_6(n);
-        [HttpPost("[action]")]
-        [SwaggerOperation(Description = "1.2.7 Дан массив x, причем x[1] <= x[2] <= ... <= x[n]"
-            + "Найдите количество различных чисел среди элементов массива, чтобы количество действий"
-            + "был порядка log n")]
-        public async Task<int> Task1_2_7(int n) =>
-            await _algorithmsTasksSolvingService.Task1_2_7(n);
+        // [HttpPost("[action]")]
+        // [SwaggerOperation(Description = "1.2.7 Дан массив x, причем x[1] <= x[2] <= ... <= x[n]"
+        //     + "Найдите количество различных чисел среди элементов массива, чтобы количество действий"
+        //     + "был порядка log n")]
+        // public async Task<int> Task1_2_7(int n) =>
+        //     await _algorithmsTasksSolvingService.Task1_2_7(n);
+        // [HttpPost("[action]")]
+        // [SwaggerOperation(Description = "Прямоугольное поле m × n разбито на"
+        //     + "mn квадратных клеток. Некоторые клетки покрашены в чёрный цвет."
+        //     + "Известно, что все чёрные клетки могут быть разбиты на несколько"
+        //     + "непересекающихся и не имеющих общих вершин чёрных прямоуголь-"
+        //     + "ников. Считая, что цвета клеток даны в виде массива типа")]
+        // public async Task<int> Task1_2_9(int m, int n) => 
+        //     await _algorithmsTasksSolvingService.Task1_2_9(m, n);
     }
 }
