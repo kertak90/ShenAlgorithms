@@ -43,6 +43,8 @@ namespace ShenAlgorithms
             
             services.AddScoped<AlgorithmsTasksSolvingService>();
             services.AddScoped<SortAlgorithmsService>();
+            services.AddScoped<TreeService>();
+            services.AddScoped<SomeArrayAlgorithmsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
